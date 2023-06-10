@@ -55,7 +55,6 @@ bindsym $mod+Return exec alacritty
 exec --no-startup-id feh --bg-scale ~/.config/background.jpg
 
 # polybar
-
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 gaps top 45
 
@@ -68,6 +67,14 @@ for_window [class=".*"] border pixel 3
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# Brightness
+bindsym F10 exec xbacklight +10
+bindsym F9 exec xbacklight -10
+
+# Volume
+bindsym F7 exec amixer -D pulse sset Master 1%+
+bindsym F6 exec amixer -D pulse sset Master 1%-
 
 # Start Rofi
 
